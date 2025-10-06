@@ -1,1 +1,17 @@
 
+export AKS_AND_STORAGE_ACCOUNT_RG="aks-files-actions"
+export AKS_CLUSTER_NAME="aks-actions"
+export STORAGE_ACCOUNT_NAME=""
+export AKS_STORAGE_ACCOUNT_LOCATION="westus3"
+export GITHUB_CONFIG_URL="azure-files-samples/Workloads/azurefiles-actions-aks at master · Azure-Samples/azure-files-samples"
+
+# Optional. Changes might require additional changes on ./install/*.yaml files.
+
+export NAMESPACE_ARC_CONTROLLER="arc-systems"
+export ARC_CONTROLLER_NAME="arc-controller"
+export NAMESPACE_ARC_RUNNERS="arc-runners"
+export ARC_RUNNER_SCALESET_NAME="arc-runner-set"
+export ARC_RUNNER_GITHUB_SECRET_NAME=""
+
+
+
