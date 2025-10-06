@@ -1,1 +1,3 @@
-
+az extension add --upgrade --name aks-preview --yes --allow-preview true 
+az extension add --upgrade --name k8s-extension --yes --allow-preview false 
+az extension add --upgrade --name amg --yes --allow-preview false
