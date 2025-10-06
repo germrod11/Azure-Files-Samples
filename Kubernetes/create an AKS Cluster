@@ -2,3 +2,7 @@ az aks create --resource-group "${AKS_AND_STORAGE_ACCOUNT_RG}" --name "${AKS_CLU
 
 az aks get-credentials --resource-group "${AKS_AND_STORAGE_ACCOUNT_RG}" --name "${AKS_CLUSTER_NAME}"
 
+
+
+
+kubectl create namespace "${NAMESPACE_ARC_RUNNERS}"
