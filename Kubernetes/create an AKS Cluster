@@ -1,1 +1,4 @@
+az aks create --resource-group "${AKS_AND_STORAGE_ACCOUNT_RG}" --name "${AKS_CLUSTER_NAME}" --os-sku AzureLinux --node-count 1 --enable-cluster-autoscaler --min-count 1 --max-count 3 --node-vm-size standard_d4s_v5 --max-pods=100 --network-plugin azure --network-plugin-mode overlay --generate-ssh-keys
+
+az aks get-credentials --resource-group "${AKS_AND_STORAGE_ACCOUNT_RG}" --name "${AKS_CLUSTER_NAME}"
 
