@@ -6,3 +6,20 @@ az aks get-credentials --resource-group "${AKS_AND_STORAGE_ACCOUNT_RG}" --name "
 
 
 kubectl create namespace "${NAMESPACE_ARC_RUNNERS}"
+
+kubectl create secret generic azure-storage-secret \ 
+   --namespace "${NAMESPACE_ARC_RUNNERS}" \ 
+   --from-literal=azurestorageaccountname=${STORAGE_ACCOUNT_NAME} \ 
+   --from-literal=azurestorageaccountkey=${STORAGE_KEY}
+
+
+
+
+GITHUB_APP_ID="app-id-placeholder"
+GITHUB_APP_INSTALLATION_ID="installation-id-placeholder"
+
+kubectl create secret generic ${ARC_RUNNER_GITHUB_SECRET_NAME} \ 
+    --namespace=${NAMESPACE_ARC_RUNNERS} \
+    --from-literal=github_app_id=${GITHUB_APP_ID} \
+    --from-literal=github_app_installation_id=${GITHUB_APP_INSTALLATION_ID} \
+    --from-literal=github_app_private_key=' <Private Key read here>'
