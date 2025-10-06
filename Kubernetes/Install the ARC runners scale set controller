@@ -1,1 +1,4 @@
-
+helm install "${ARC_CONTROLLER_NAME}" \ 
+    --namespace "${NAMESPACE_ARC_CONTROLLER}" \ 
+    --create-namespace \
+    oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
